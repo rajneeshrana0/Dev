@@ -1,0 +1,102 @@
+/* Resetting default margins and paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Body styles */
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+
+    height: 100vh;
+  }
+  
+  /* Main container */
+  h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #333;
+    margin-top: 40px;
+  }
+  
+  div {
+    text-align: center;
+  }
+  
+  /* Input field */
+  #inp {
+    padding: 10px;
+    font-size: 1rem;
+    width: 80%;
+    max-width: 300px;
+    margin-bottom: 20px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  /* Add button */
+  button {
+    padding: 10px 15px;
+    font-size: 1rem;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  
+  /* Todo list container */
+  #todos {
+    width: 80%;
+    max-width: 500px;
+    margin-top: 20px;
+    text-align: left;
+  }
+  
+  /* Each todo item */
+  #todos div {
+    background-color: #fff;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  /* Delete button */
+  button {
+    background-color: #f44336;
+    font-size: 0.9rem;
+    padding: 5px 10px;
+  }
+  
+  button:hover {
+    background-color: #e53935;
+  }
+  
+  /* Responsive design */
+  @media (max-width: 600px) {
+    h1 {
+      font-size: 2rem;
+    }
+  
+    #inp {
+      width: 70%;
+    }
+  
+    #todos {
+      width: 90%;
+    }
+  }
+  

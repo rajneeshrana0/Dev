@@ -1,0 +1,153 @@
+body {
+  background-color: #0d1117;
+}
+
+.navbar {
+  display: flex;
+  padding-left: 200px;
+  padding-right: 200px;
+  /* padding: 20px; */
+  justify-content: space-between;
+  padding-top: 10px;
+  color: white;
+}
+.logo {
+  display: flex;
+  color: white;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.logotext {
+  font-weight: 300px;
+}
+
+.navbar .navlink a {
+  color: gray;
+  margin: 10px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.navbar .navlink a:hover {
+  color: white;
+  cursor: pointer;
+}
+.navbar .navbutton {
+  margin: 5px;
+}
+.navbar .navbutton button {
+  background-color: #0069b9;
+  border: none;
+  padding: 15px;
+
+  border-radius: 5px;
+  color: white;
+}
+
+.navbar .navbutton button:hover {
+  background-color: #054b80;
+
+  padding: 15px;
+  cursor: pointer;
+}
+.navbar .navbutton input {
+  border: gray solid 1px;
+  padding: 15px;
+  border-radius: 5px;
+  background-color: #0d1117;
+  color: gray;
+}
+
+.navbar .navbutton input:hover {
+  border: #0069b9 solid 1px;
+
+  color: gray;
+}
+
+/* Noti Banner Start here   */
+
+.notibanner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.notibanner a {
+  color: #217ec5;
+  font-weight: bold;
+}
+
+.notibanner p {
+  color: gray;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+/* Hero SEctionm Start From hereer */
+
+.herosection {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.herosection h1 {
+  font-size: 72px;
+  max-width: 1000px;
+  margin-bottom: -10px;
+}
+.herosection p {
+  font-size: 26px;
+  max-width: 720px;
+  color: gray;
+}
+.herosection .herobutton {
+  margin-top: 15px;
+  margin-left: 100px;
+}
+
+.herosection .herobutton .herobuttonlink a {
+ 
+
+  margin: 10px 0px 0px 0px;
+  padding-left: 10px;
+  color: #4d88cb;
+}
+
+.herosection .herobutton .herobuttonlink span {
+  color: gray;
+}
+
+.herosection .herobutton button {
+  padding: 50px;
+  background-color: #0069b9;
+  border: none;
+  border-radius: 9px;
+  margin: 5px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 4px;
+  font-size: 1.8rem;
+  padding: 10px 20px;
+  color: white;
+}
+.herosection .herobutton button:hover {
+  background-color: #11466e;
+  cursor: pointer;
+}
+
+.herosection .herobutton .diff {
+  background-color: #26292f;
+}
+.herosection .herobutton .diff:hover {
+  background-color: #26292f;
+}
+
+.herosection .leftbox img {
+  width: 70%;
+  margin-top: 30px;
+  margin-left: 200px;
+}
