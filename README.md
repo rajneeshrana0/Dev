@@ -1,7 +1,7 @@
 # Full Stack Dev
 
 
-
+  r
 ## Notes on HTML
 
 HTML (HyperText Markup Language) is the standard language for creating web pages. It describes the structure of a webpage using markup. HTML elements are represented by tags, and these tags label pieces of content such as "heading", "paragraph", "table", and so on.
