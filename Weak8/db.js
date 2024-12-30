@@ -4,7 +4,7 @@ const Schema = mongoose.Schema;
 const ObjectId = mongoose.ObjectId;
 
 // Connect to MongoDB
-mongoose.connect("mongodb+srv://ranarajneesh075:DjBa7wS52OKrWQMu@cluster0.xlpmf.mongodb.net/course-Selling-Backend");
+
 
 // Define Schemas
 const userSchema = new Schema({
