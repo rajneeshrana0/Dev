@@ -35,10 +35,10 @@ const purchaseSchema = new Schema({
 });
 
 // Define Models
-const UserModel = mongoose.model("users", userSchema); // Model name: 'users'
-const AdminModel = mongoose.model("admin", adminSchema); // Model name: 'admin'
-const CourseModel = mongoose.model("courses", courseSchema); // Fixed model name: 'courses'
-const PurchaseModel = mongoose.model("purchases", purchaseSchema); // Fixed model name: 'purchases'
+const UserModel = mongoose.model("users", userSchema); 
+const AdminModel = mongoose.model("admin", adminSchema); 
+const CourseModel = mongoose.model("courses", courseSchema); 
+const PurchaseModel = mongoose.model("purchases", purchaseSchema); 
 
 // Export Models
 module.exports = {

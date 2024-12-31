@@ -2,8 +2,7 @@ const { Router } = require("express")
 const userRouter = Router();
 const { UserModel } = require("../db");
 const jwt = require("jsonwebtoken");
-
-const JWT_SECRET = "rana";
+const {JWT_SECRET} = require("../config");
 
 // console.log(UserModel);
 userRouter.post("/signup", async (req, res) => {

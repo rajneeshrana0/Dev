@@ -11,7 +11,7 @@ const app = express();
 app.use(express.json())
 
 app.use("/users" , userRouter);
-app.use("/course", courseRouter);
+app.use("/", courseRouter);
 
 app.use("/admin", adminRouter);
 

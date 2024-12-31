@@ -1,11 +1,12 @@
 const {Router } = require("express");
 
 const adminRouter = Router();
-const {AdminModel} = require("../db");
+const {AdminModel, CourseModel} = require("../db");
 
 const jwt = require("jsonwebtoken");
 
-const JWT_SECRET= "Ram"
+const {JWT_SECRET_Admin} = require("../config")
+const {adminMiddelware} = require("../middelware/admin")
 
 
 adminRouter.post("/signup", async (req, res) => {
@@ -43,7 +44,7 @@ adminRouter.post("/signin", async (req, res) => {
 
           id: adminUser._id,
 
-      }, JWT_SECRET);
+      }, JWT_SECRET_Admin);
 
       res.json({
           token
@@ -58,18 +59,62 @@ adminRouter.post("/signin", async (req, res) => {
 })
 
 
-adminRouter.post("/course-create", (req, res) => {
+adminRouter.post("/course-create", adminMiddelware, async (req, res) => {
+
+
+  const adminId = req.userId;
+  const {title, desc, price,imageUrl } = req.body;
+
+   const course= await CourseModel.create({
+    title,
+    desc,
+    price,
+    imageUrl,
+    creatorId: adminId
+  })
+
+  res.status(200).json({
+    message : "Course Created Successfully",
+    courseId :  course._id
+  })
+
+});
+
+adminRouter.put("/course-update",adminMiddelware, async (req, res) => {
+
+
+  const adminId = req.userId;
+  const {title, desc, price,imageUrl,courseId } = req.body;
+
+   const course= await CourseModel.updateOne({
+    _id: courseId,
+    adminId
+   },{
+    title,
+    desc,
+    price,
+    imageUrl,
+ 
+  })
+
+  res.status(200).json({
+    message : "Course Created Successfully",
+    courseId :  course._id
+  })
 
 
 })
 
-adminRouter.put("/course-update", (req, res) => {
+adminRouter.get("/course/bulk", adminMiddelware, async (req, res) => {
+  const adminId = req.userId;
 
+  const course = await CourseModel.find({
+   adminId
+  })
 
-})
-
-adminRouter.get("/course/bulk", (req, res) => {
-
+  res.json({
+    message : "All Course fetched "
+  })
 
 })
 
